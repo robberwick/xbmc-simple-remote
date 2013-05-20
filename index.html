@@ -1,0 +1,28 @@
+<html manifest="offline.appcache">
+<head>
+	<title>XBMC Remote</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="xbmcRemote.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<form>
+		<input type="text" id="ip" placeholder="IP" />
+		<input type="text" id="port" placeholder="Port" value="9090"/>
+		<input type="submit" value="Ok" />
+	</form>
+	<div id="drawers">
+		<div id="PlayPause">Play/Pause</div>
+		<div id="Stop">Stop</div>
+	</div>
+	<div id="content">
+		<div id="Up">Up</div>
+		<div id="Down">Down</div>
+		<div id="Left">Left</div>
+		<div id="Right">Right</div>
+		<div id="Select">Select</div>
+		<div id="Back">Back</div>
+		<div id="Home">Home</div>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
