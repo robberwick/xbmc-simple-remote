@@ -4,6 +4,14 @@ index.html
 xbmcRemote.css
 normalize.css
 app.js
+style.js
+# font
+fonts/xbmc.ttf
+fonts/xbmc.svg
+fonts/xbmc.woff
+fonts/xbmc.dev.svg
+fonts/xbmc.eot
+font.css
 
 NETWORK:
 *

@@ -1,0 +1,25 @@
+#pad {
+	background-color: #eee;
+	width: 80%;
+	max-width: 300px;
+	position: fixed;
+	bottom: 0;
+	left: 10%;
+}
+
+#pad > * {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: table;
+}
+
+#pad #Up       { text-align: center; width: 100% }
+#pad #Down     { text-align: center; width: 100%; bottom: 0; top: auto }
+#pad #Left     { height: 100% }
+#pad #Left i   { display: table-cell; vertical-align: middle }
+#pad #Right    { height: 100%; right: 0; left: auto }
+#pad #Right i  { display: table-cell; vertical-align: middle }
+#pad #Select   { text-align: center; height: 100%; width: 100% }
+#pad #Select i { display: table-cell; vertical-align: middle }
+#pad #Back     { bottom: 0; top: auto }
