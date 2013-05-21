@@ -55,8 +55,12 @@ var click = function(method, button){
 						var playerid = res.result[0].playerid;
 						sendRequest({jsonrpc: "2.0", method: method+"."+button.id, id: 1, params: {playerid: playerid}},
 						function(result){
-							console.log(result);
+							if(result.result === "OK"){
+								document.getElementById("PlayPause").children[0].className="icon-pause";
+							}
 						});
+					} else {
+						document.getElementById("PlayPause").children[0].className="icon-play";
 					}
 				});
 			} else {
