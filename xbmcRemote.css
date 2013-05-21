@@ -2,8 +2,7 @@
 	background-color: #eee;
 	width: 80%;
 	max-width: 300px;
-	position: fixed;
-	bottom: 0;
+	position: relative;
 	left: 10%;
 }
 

@@ -1,30 +1,39 @@
 <html manifest="offline.appcache">
 <head>
 	<title>XBMC Remote</title>
-	<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link rel="stylesheet" type="text/css" href="font.css" />
-	<link rel="stylesheet" type="text/css" href="xbmcRemote.css">
+	<link rel="stylesheet" type="text/css" href="font.css"/>
+	<link rel="stylesheet" type="text/css" href="build/build.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<form>
-		<input type="text" id="ip" placeholder="IP" />
-		<input type="text" id="port" placeholder="Port" value="9090"/>
-		<input type="submit" value="Ok" />
-	</form>
-	<div id="content">
-		<div id="PlayPause"><i class="icon-play"></i></div>
-		<div id="Stop"     ><i class="icon-stop"></i></div>
-		<div id="pad">
-		<div id="Up"       ><i class="icon-arrow-up"></i></div>
-		<div id="Down"     ><i class="icon-arrow-down"></i></div>
-		<div id="Left"     ><i class="icon-arrow-left"></i></div>
-		<div id="Right"    ><i class="icon-arrow-right"></i></div>
-		<div id="Select"   ><i class="icon-circle-blank"></i></div>
-		<div id="Back"     ><i class="icon-reply"></i></div>
+	<div class="drawer" id="drawer">
+		<div class="drawers">
+			<div class="top">
+				<form>
+					<input type="text" id="ip" placeholder="IP" />
+					<input type="text" id="port" placeholder="Port" value="9090"/>
+					<input type="submit" value="Ok" />
+				</form>
+			</div>
 		</div>
-		<div id="Home"   class="icon-home"></div>
+		<div class="content">
+			<div id="settings"><i class="icon-cog"></i></div>
+			<div id="PlayPause"><i class="icon-play"></i></div>
+			<div id="Stop"     ><i class="icon-stop"></i></div>
+			<div id="pad">
+			<div id="Up"       ><i class="icon-arrow-up"></i></div>
+			<div id="Down"     ><i class="icon-arrow-down"></i></div>
+			<div id="Left"     ><i class="icon-arrow-left"></i></div>
+			<div id="Right"    ><i class="icon-arrow-right"></i></div>
+			<div id="Select"   ><i class="icon-circle-blank"></i></div>
+			<div id="Back"     ><i class="icon-reply"></i></div>
+			</div>
+			<div id="Home"     ><i class="icon-home"></i></div>
+		</div>
 	</div>
-	<script type="text/javascript" src="app.js"></script>
-	<script type="text/javascript" src="style.js"></script>
+	<script type="text/javascript" src="build/build.js"></script>
+	<script type="text/javascript">
+		require('xbmc-simple-remote/style.js');
+		require('xbmc-simple-remote/app.js');
+	</script>
 </body>

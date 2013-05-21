@@ -1,3 +1,6 @@
+
+Drawer = require('drawer');
+
 var buttons = {
 	'Player': ['PlayPause', 'Stop'],
 	'Input' : ['Up', 'Down', 'Left', 'Right', 'Select', 'Back', 'Home']
@@ -44,8 +47,8 @@ document.getElementById("ip").parentNode.addEventListener('submit', function(ev)
 	return false
 });
 
-var click = function(method, button){
-	button.addEventListener('click', function(ev){
+var apibutton = function(method, button) {
+	return function(ev) {
 		ev.preventDefault();
 		if(ws !== null){
 			if(method === "Player"){
@@ -73,7 +76,13 @@ var click = function(method, button){
 			alert("Please specify IP and port of your XBMC.");
 		}
 		return false
-	});
+	};
+};
+
+var click = function(method, button) {
+	var f = apibutton(method, button);
+	button.addEventListener('click', f);
+	button.addEventListener('touchstart', f);
 }
 
 var methods = Object.keys(buttons)
@@ -94,3 +103,12 @@ if(localStorage.ip !== undefined && localStorage.port !== undefined){
 	connect(ip, port);
 }
 
+var drawer = new Drawer(document.getElementById('drawer'), 'horizontal');
+window.drawer = drawer;
+
+var settings = document.getElementById('settings');
+var settingsClick = function(e) {
+	drawer.toggleTop();
+};
+settings.addEventListener('click', settingsClick);
+settings.addEventListener('touchstart', settingsClick);

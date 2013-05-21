@@ -1,0 +1,21 @@
+{
+	"name": "xbmc-simple-remote",
+	"repo": "fisch42/xbmc-simple-remote",
+	"description": "Simple XBMC Remote using WebSockets.",
+	"version": "0.0.1-1",
+	"keywords": [],
+	"dependencies": {
+		"necolas/normalize.css": "*",
+		"niclashoyer/drawer": "*"
+	},
+	"development": {},
+	"license": "MIT",
+	"main": "app.js",
+	"scripts": [
+		"app.js",
+		"style.js"
+	],
+	"styles": [
+		"xbmcRemote.css"
+	]
+}
