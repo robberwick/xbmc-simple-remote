@@ -15,6 +15,7 @@ var connect = function(ip, port){
 	if(ip !== null && port !== null){
 		id = 0;
 		ws = new WebSocket("ws://"+ip+":"+port+"/jsonrpc");
+		window.testws = ws;
 		ws.onmessage = function(e){
 			try {
 				var data = JSON.parse(e.data);
