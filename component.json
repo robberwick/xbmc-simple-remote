@@ -9,13 +9,5 @@
 		"niclashoyer/drawer": "*"
 	},
 	"development": {},
-	"license": "MIT",
-	"main": "app.js",
-	"scripts": [
-		"app.js",
-		"style.js"
-	],
-	"styles": [
-		"xbmcRemote.css"
-	]
+	"license": "MIT"
 }
