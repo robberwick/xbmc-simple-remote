@@ -9,8 +9,5 @@
 		"niclashoyer/drawer": "*"
 	},
 	"development": {},
-	"license": "MIT",
-	"styles": [
-		"xbmcRemote.css"
-	]
+	"license": "MIT"
 }

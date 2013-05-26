@@ -1,24 +1,207 @@
-#pad {
-	background-color: #eee;
-	width: 80%;
-	max-width: 300px;
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+div i, .content header, #bar, #pad {
+	font-size: 25px;
+}
+
+div i, input[type="text"], .content header {
+	color: white;
+}
+
+div i {
+	border-radius: 6px 6px;
+	width: 1.5em;
+	height: 1.5em;
+	display: inline-block;
 	position: relative;
-	left: 10%;
+	text-align: center;
 }
 
-#pad > * {
+div i:before {
+	position: relative;
+	top: 0.3em;
+}
+
+input[type="text"], #connect {
+	width: 100%;
+	border-radius: 6px;
+	background-image: none;
+}
+
+input[type="text"] {
+	border: 2px solid white;
+	background-color: transparent;
+	padding: 8px 0px 9px 10px;
+	font-size: 16.5px;
+}
+
+#connect {
+	border: medium none;
+	background-color: #2ecc71;
+	padding-bottom: 12px;
+	padding-top: 13px;
+	color: white;
+	margin-bottom: 2em;
+}
+
+#connect.connecting {
+	background-color: #f1c40f;
+}
+
+#connect.connected {
+	background-color: #e74c3c;
+}
+
+input {
+	margin-bottom: 0.5em;
+}
+
+form {
+	margin: 0;
+}
+
+#pad, #bar {
+	position: relative;
+	padding: 0.5em;
+}
+
+.content header, #bar {
+	margin-bottom: 1em;
+}
+
+#bar {
+	text-align: center;
+}
+
+#bar #home { float: left; }
+#bar #stop { float: right; }
+
+.drawer .drawers .top {
+	height: auto;
+	max-height: none;
+}
+
+.content header, #pad, #bar {
+	background-color: #ecf0f1;
+}
+
+.drawer .drawers > *, div i {
+	background-color: #34495e;
+}
+
+.drawer .drawers > * {
+	padding: 5%;
+}
+
+.drawer > .content {
+	position: relative;
+}
+
+.drawer > .drawers > .top {
 	position: absolute;
-	left: 0;
-	top: 0;
-	display: table;
 }
 
-#pad #Up       { text-align: center; width: 100% }
-#pad #Down     { text-align: center; width: 100%; bottom: 0; top: auto }
-#pad #Left     { height: 100% }
-#pad #Left i   { display: table-cell; vertical-align: middle }
-#pad #Right    { height: 100%; right: 0; left: auto }
-#pad #Right i  { display: table-cell; vertical-align: middle }
-#pad #Select   { text-align: center; height: 100%; width: 100% }
-#pad #Select i { display: table-cell; vertical-align: middle }
-#pad #Back     { bottom: 0; top: auto }
+.content header {
+	width: 100%;
+	height: 1.5em;
+}
+
+#settings {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#settings i {
+	border-radius: 0;
+}
+
+#settings i:before {
+	top: 0.25em;
+}
+
+#pad > div {
+	width: 90%;
+	position: absolute;
+	left: auto;
+	height: 1.5em;
+}
+
+#pad > * > * {
+	display: block;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+}
+
+#Left, #Back {
+	float: left;
+	text-align: left;
+}
+
+#Right {
+	float: right;
+	text-align: right;
+}
+
+#Up, #Select, #Down {
+	text-align: center;
+}
+
+#pad > .middle {
+	position: absolute;
+	top: 50%;
+	margin-top: -0.75em;
+}
+
+#pad > .bottom {
+	position: absolute;
+	left: auto;
+	bottom: 5%;
+}
+
+#Up {
+	width: 100%;
+}
+
+@media (min-width: 0px) {
+	html {
+		font-size: 25px;
+	}
+	
+	div i, .content header, #bar, #pad {
+		font-size: 30px;
+	}
+}
+
+@media (min-width: 0px) {
+	#pad, #bar {
+		width: 85%;
+		left: 7.5%;
+		border-radius: 6px;
+	}
+	
+	html {
+		font-size: 30px;
+	}
+	
+	div i, .content header, #bar, #pad {
+		font-size: 35px;
+	}
+}
+
+@media (min-width: 450px) {
+	#pad, #bar {
+		width: 400px;
+		left: 50%;
+		margin-left: -200px;
+	}
+}
