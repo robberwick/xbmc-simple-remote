@@ -1,8 +1,10 @@
 CACHE MANIFEST
-# v0.0.1-1
+# v0.0.2-1
 index.html
 xbmcRemote.css
-normalize.css
+build/build.css
+build/build.js
+xbmc.js
 app.js
 style.js
 # font
