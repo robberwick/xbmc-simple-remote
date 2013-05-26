@@ -133,27 +133,28 @@ form {
 	position: absolute;
 	left: auto;
 	height: 1.5em;
+	z-index: 9;
 }
 
 #pad > * > * {
-	display: block;
+	display: inline-block;
 	text-align: center;
-	width: 100%;
 	position: absolute;
+	width: 33%;
 }
 
 #Left, #Back {
-	float: left;
 	text-align: left;
 }
 
 #Right {
-	float: right;
+	right: 0;
 	text-align: right;
 }
 
 #Up, #Select, #Down {
 	text-align: center;
+	left: 33%;
 }
 
 #pad > .middle {
@@ -166,10 +167,6 @@ form {
 	position: absolute;
 	left: auto;
 	bottom: 5%;
-}
-
-#Up {
-	width: 100%;
 }
 
 @media (min-width: 0px) {

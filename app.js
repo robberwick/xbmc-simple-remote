@@ -1,41 +1,13 @@
 
 Drawer = require('drawer');
+//Xbmc = require('xbmc');
 
-var buttons = {
-	'Player': ['PlayPause', 'Stop'],
-	'Input' : ['Up', 'Down', 'Left', 'Right', 'Select', 'Back', 'Home']
-}
-
-var requests = {};
-
-var ws = null;
-var id;
+var xbmc = null;
 
 var connect = function(ip, port){
 	if(ip !== null && port !== null){
-		id = 0;
-		ws = new WebSocket("ws://"+ip+":"+port+"/jsonrpc");
-		window.testws = ws;
-		ws.onmessage = function(e){
-			try {
-				var data = JSON.parse(e.data);
-				if(data.id !== undefined){
-					if(requests[id] !== undefined){
-						requests[id](data);
-						delete requests[id];
-					}
-				}
-			} catch (ex){
-				console.error(ex);
-			}
-		}
+		xbmc = new Xbmc(ip,port);
 	}
-}
-
-var sendRequest = function(data, cb){
-	id++;
-	requests[id] = cb;
-	ws.send(JSON.stringify(data));
 }
 
 document.getElementById("ip").parentNode.addEventListener('submit', function(ev){
@@ -48,52 +20,21 @@ document.getElementById("ip").parentNode.addEventListener('submit', function(ev)
 	return false
 });
 
-var apibutton = function(method, button) {
-	return function(ev) {
-		ev.preventDefault();
-		if(ws !== null){
-			if(method === "Player"){
-				sendRequest({jsonrpc: "2.0", method: "Player.GetActivePlayers", id: 1},
-				function(res){
-					if(res.result.length > 0){
-						var playerid = res.result[0].playerid;
-						sendRequest({jsonrpc: "2.0", method: method+"."+button.id, id: 1, params: {playerid: playerid}},
-						function(result){
-							if(result.result === "OK"){
-								document.getElementById("PlayPause").children[0].className="icon-pause";
-							}
-						});
-					} else {
-						document.getElementById("PlayPause").children[0].className="icon-play";
-					}
-				});
-			} else {
-				sendRequest({jsonrpc: "2.0", method: method+"."+button.id, id: 1},
-				function(res){
-					console.log(res);
-				});
-			}			  
-		} else {
-			alert("Please specify IP and port of your XBMC.");
-		}
-		return false
+var addClick = function(el, method) {
+	var fn = function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		xbmc[method]();
 	};
+	el.addEventListener('click', fn);
+	el.addEventListener('touchstart', fn);
 };
 
-var click = function(method, button) {
-	var f = apibutton(method, button);
-	button.addEventListener('click', f);
-	button.addEventListener('touchstart', f);
-}
-
-var methods = Object.keys(buttons)
-for (i = 0; i < methods.length; i++) {
-	var method = methods[i];
-	var btns = buttons[method];
-	for (j = 0; j < btns.length; j++) {
-		var button = btns[j];
-		click(method, document.getElementById(button));
-	}
+var xbmcs = document.querySelectorAll('[data-xbmc]');
+for (var i=0; i<xbmcs.length; i++) {
+	var el = xbmcs[i];
+	var method = el.getAttribute('data-xbmc');
+	addClick(el, method);
 }
 
 if(localStorage.ip !== undefined && localStorage.port !== undefined){
