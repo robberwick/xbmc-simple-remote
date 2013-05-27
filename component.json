@@ -1,13 +1,14 @@
 {
-	"name": "xbmc-simple-remote",
-	"repo": "fisch42/xbmc-simple-remote",
-	"description": "Simple XBMC Remote using WebSockets.",
-	"version": "0.0.1-1",
-	"keywords": [],
-	"dependencies": {
-		"necolas/normalize.css": "*",
-		"niclashoyer/drawer": "*"
-	},
-	"development": {},
-	"license": "MIT"
+  "name": "xbmc-simple-remote",
+  "repo": "fisch42/xbmc-simple-remote",
+  "description": "Simple XBMC Remote using WebSockets.",
+  "version": "0.0.1-1",
+  "keywords": [],
+  "dependencies": {
+    "necolas/normalize.css": "*",
+    "niclashoyer/drawer": "*",
+    "fisch42/xbmc-client": "*"
+  },
+  "development": {},
+  "license": "MIT"
 }
