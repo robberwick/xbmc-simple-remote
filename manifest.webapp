@@ -7,8 +7,10 @@
 		"url": "https://coderwall.com/fisch42" 
 	},
 	"icons": {
-		"60": "/icon.png"
+		"60": "/icon.png",
+		"128": "/icon-128.png"
 	},
 	"default_locale": "en",
-	"version": "0.0.1"
+	"appcache_path": "/offline.appcache",
+	"version": "0.0.1-1"
 }
