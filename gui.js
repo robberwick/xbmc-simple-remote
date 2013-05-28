@@ -47,6 +47,8 @@
     ip.value = localStorage.ip;
     port.value = localStorage.port;
     connect(localStorage.ip, localStorage.port);
+  } else {
+    drawer.drawTop();
   }
 
   click = function(elem, cb) {

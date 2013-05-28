@@ -29,9 +29,11 @@ connect = (ip, port) ->
 		xbmc.on 'connected', drawer.close()
 
 if localStorage.ip isnt undefined && localStorage.port isnt undefined
-	ip.value = localStorage.ip;
-	port.value = localStorage.port;
+	ip.value = localStorage.ip
+	port.value = localStorage.port
 	connect localStorage.ip, localStorage.port
+else
+	drawer.drawTop()
 
 click = (elem, cb) ->
 		elem.addEventListener 'click', cb
