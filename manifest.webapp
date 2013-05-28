@@ -1,16 +1,16 @@
 {
-	"name": "XBMC Simple Remote",
+	"name": "XBMC Remote",
 	"description": "Simple XBMC Remote using WebSockets",
-	"launch_path": "index.html",
+	"launch_path": "/simple-xbmc-remote/",
 	"developer": {
 		"name": "Fiona Schmidtke",
 		"url": "https://coderwall.com/fisch42" 
 	},
 	"icons": {
-		"60": "icon.png",
-		"128": "icon-128.png"
+		"60": "/simple-xbmc-remote/icon.png",
+		"128": "/simple-xbmc-remote/icon-128.png"
 	},
 	"default_locale": "en",
-	"appcache_path": "offline.appcache",
+	"appcache_path": "/simple-xbmc-remote/offline.appcache",
 	"version": "0.0.1-1"
 }
