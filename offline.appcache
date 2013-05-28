@@ -6,6 +6,8 @@ build/build.css
 build/build.js
 gui.js
 style.js
+icon.png
+icon-128.png
 # font
 fonts/xbmc.ttf
 fonts/xbmc.svg
