@@ -1,0 +1,18 @@
+CACHE MANIFEST
+# v0.0.1-1
+index.html
+xbmcRemote.css
+build/build.css
+build/build.js
+gui.js
+style.js
+# font
+fonts/xbmc.ttf
+fonts/xbmc.svg
+fonts/xbmc.woff
+fonts/xbmc.dev.svg
+fonts/xbmc.eot
+font.css
+
+NETWORK:
+*

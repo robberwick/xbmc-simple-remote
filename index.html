@@ -1,0 +1,49 @@
+<html manifest="offline.appcache">
+<head>
+	<title>XBMC Remote</title>
+	<link rel="stylesheet" type="text/css" href="font.css"/>
+	<link rel="stylesheet" type="text/css" href="build/build.css"/>
+	<link rel="stylesheet" type="text/css" href="xbmcRemote.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="drawer" id="drawer">
+		<div class="drawers">
+			<div class="top">
+				<form>
+					<input type="text" id="ip" placeholder="IP" />
+					<input type="text" id="port" placeholder="Port" value="9090"/>
+					<input id="connect" type="submit" value="Connect" />
+				</form>
+			</div>
+		</div>
+		<div class="content">
+			<header>
+				<div id="settings"><i class="icon-cog"></i></div>
+			</header>
+			<div id="bar">
+				<div id="Home"      data-xbmc="home"     ><i class="icon-home"></i></div>
+				<div id="Stop"      data-xbmc="stop"     ><i class="icon-stop"></i></div>
+				<div id="PlayPause" data-xbmc="playPause"><i class="icon-play"></i></div>
+			</div>
+			<div id="pad">
+				<div class="top">
+					<div id="Up"     data-xbmc="up"    ><i class="icon-arrow-up"></i></div>
+				</div>
+				<div class="middle">
+					<div id="Left"   ><i class="icon-arrow-left"   data-xbmc="left"  ></i></div>
+					<div id="Select" ><i class="icon-circle-blank" data-xbmc="select"></i></div>
+					<div id="Right"  ><i class="icon-arrow-right"  data-xbmc="right" ></i></div>
+				</div>
+				<div class="bottom">
+					<div id="Back"   data-xbmc="back"  ><i class="icon-reply"></i></div>
+					<div id="Down"   data-xbmc="down"  ><i class="icon-arrow-down"></i></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="build/build.js"></script>
+	<script type="text/javascript" src="style.js"></script>
+	<script type="text/javascript" src="gui.js"></script>
+</body>

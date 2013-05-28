@@ -1,0 +1,99 @@
+@font-face {
+	font-family: 'xbmc';
+	src:url('fonts/xbmc.eot');
+	src:url('fonts/xbmc.eot?#iefix') format('embedded-opentype'),
+		url('fonts/xbmc.woff') format('woff'),
+		url('fonts/xbmc.ttf') format('truetype'),
+		url('fonts/xbmc.svg#xbmc') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'xbmc';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-arrow-up, .icon-play, .icon-stop, .icon-pause, .icon-backward, .icon-fast-backward, .icon-step-backward, .icon-arrow-left, .icon-fast-forward, .icon-forward, .icon-step-forward, .icon-arrow-right, .icon-cog, .icon-arrow-down, .icon-eject, .icon-resize-small, .icon-rss, .icon-circle-blank, .icon-reply, .icon-home {
+	font-family: 'xbmc';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-arrow-up:before {
+	content: "\f062";
+}
+.icon-play:before {
+	content: "\f04b";
+}
+.icon-stop:before {
+	content: "\f04d";
+}
+.icon-pause:before {
+	content: "\f04c";
+}
+.icon-backward:before {
+	content: "\f04a";
+}
+.icon-fast-backward:before {
+	content: "\f049";
+}
+.icon-step-backward:before {
+	content: "\f048";
+}
+.icon-arrow-left:before {
+	content: "\f060";
+}
+.icon-fast-forward:before {
+	content: "\f050";
+}
+.icon-forward:before {
+	content: "\f04e";
+}
+.icon-step-forward:before {
+	content: "\f051";
+}
+.icon-arrow-right:before {
+	content: "\f061";
+}
+.icon-cog:before {
+	content: "\f013";
+}
+.icon-arrow-down:before {
+	content: "\f063";
+}
+.icon-eject:before {
+	content: "\f052";
+}
+.icon-resize-small:before {
+	content: "\f066";
+}
+.icon-rss:before {
+	content: "\f09e";
+}
+.icon-circle-blank:before {
+	content: "\f10c";
+}
+.icon-reply:before {
+	content: "\f112";
+}
+.icon-home:before {
+	content: "\f015";
+}
