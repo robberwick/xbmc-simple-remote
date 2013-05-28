@@ -7,6 +7,7 @@
 		"url": "https://coderwall.com/fisch42" 
 	},
 	"icons": {
+		"60": "/icon.png"
 	},
 	"default_locale": "en",
 	"version": "0.0.1"
