@@ -12,5 +12,10 @@
 	},
 	"default_locale": "en",
 	"appcache_path": "/xbmc-simple-remote/offline.appcache",
-	"version": "0.0.1-2"
+	"version": "0.0.1-2",
+	"locales": {
+		"de": {
+			"description": "Eine einfache XBMC Fernbedienung über WebSockets",
+			"name": "XBMC Fernbedienung"
+	}
 }
