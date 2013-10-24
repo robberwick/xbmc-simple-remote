@@ -11,6 +11,7 @@ port     = document.getElementById 'port'
 form     = ip.parentNode
 drawer   = new Drawer document.getElementById('drawer'), 'horizontal'
 settings = document.getElementById 'settings'
+about    = document.getElementById 'about'
 xbmcs    = document.querySelectorAll '[data-xbmc]'
 playIcon = document.getElementById('PlayPause').children[0]
 
@@ -46,6 +47,17 @@ addEventListener = ->
 		localStorage.port = port.value
 		connect ip.value, port.value
 		return false
+
+	click about, (e) ->
+		if MozActivity?
+			e.preventDefault()
+			new MozActivity
+				name: "view"
+				data:
+					type: "url"
+					url: "https://marketplace.firefox.com/app/xbmc-simple-remote"
+			return false
+		return true
 
 	click settings, (e) ->
 		drawer.toggleTop()
