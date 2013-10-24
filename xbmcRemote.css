@@ -30,7 +30,7 @@ div i:before {
 	top: 0.3em;
 }
 
-input[type="text"], #connect {
+input[type="text"], #connect, .button {
 	width: 100%;
 	border-radius: 6px;
 	background-image: none;
@@ -43,13 +43,15 @@ input[type="text"] {
 	font-size: 16.5px;
 }
 
-#connect {
+#connect, .button {
 	border: medium none;
-	background-color: #2ecc71;
 	padding-bottom: 12px;
 	padding-top: 13px;
+}
+
+#connect {
+	background-color: #2ecc71;
 	color: white;
-	margin-bottom: 2em;
 }
 
 #connect.connecting {
@@ -58,6 +60,14 @@ input[type="text"] {
 
 #connect.connected {
 	background-color: #e74c3c;
+}
+
+.button {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	background-color: rgb(236, 240, 241);
+	color: rgb(52, 73, 94);
 }
 
 input {
