@@ -17,5 +17,6 @@
 		"de": {
 			"description": "Eine einfache XBMC Fernbedienung über WebSockets",
 			"name": "XBMC Fernbedienung"
+		}
 	}
 }
